@@ -1,0 +1,56 @@
+Colocar os métodos de autenticação e verificação que foram colocados em outras classes,
+nas classes Mapper e Authentication
+
+Na classe Authentication, ver se preciso usar o request no lugar da entity
+
+Criar classe transaction no service, reposository (a ver) e mapper
+
+Após criar a classe transaction, criar a classe extrato (a ver em quais pacotes)
+
+O sistema vai chamar método de autenticação de idNumber e password (singleton), e vai ter
+a lista de contas do cliente, e ele escolherá qual quer acessar. Acessando, escolhe as operações.
+
+Após tudo, criar a classe sistema e depois as controllers.
+
+
+
+Classes transaction do service são design patterns strategy:
+O padrão Strategy é indicado quando você precisa definir uma família de algoritmos, encapsulá-los individualmente e torná-los intercambiáveis sem alterar o código que os utiliza. Ele permite que o comportamento de uma classe seja selecionado em tempo de execução, promovendo a flexibilidade e a separação de responsabilidades.
+Quando usar o padrão Strategy
+Múltiplas variações de comportamento
+
+Quando há várias implementações de um mesmo comportamento, e o código que utiliza esses comportamentos não deve depender de como eles são implementados.
+Exemplo: Métodos de pagamento (cartão de crédito, boleto, Pix) em um sistema de e-commerce.
+Evitar condicional excessivo (if/else ou switch)
+
+Quando muitas condições são usadas para decidir qual comportamento executar, o Strategy organiza isso substituindo condicionais por diferentes classes.
+Exemplo: Diferentes tipos de cálculo de desconto em um carrinho de compras.
+Facilidade de extensão e manutenção
+
+Quando você espera que novos comportamentos sejam adicionados com frequência, tornando mais fácil incluir novas estratégias sem modificar o código existente.
+Exemplo: Tipos de validação para documentos em um sistema de autenticação.
+Necessidade de alterar comportamentos dinamicamente
+
+Quando o comportamento de uma classe precisa mudar em tempo de execução com base no contexto.
+Exemplo: Modo de ataque de um personagem em um jogo que varia conforme a arma equipada.
+Promover o Princípio Aberto-Fechado (OCP)
+
+Permite adicionar novos comportamentos sem alterar o código que usa essas estratégias.
+Exemplo: Algoritmos de ordenação diferentes para cenários específicos.
+
+
+
+spring.application.name=bankSystem
+#datasource
+spring.datasource.url=jdbc:postgresql://localhost:5432/bankSystemAPI
+spring.datasource.username=postgres
+spring.datasource.password=marc
+
+
+#JPA
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+spring.jpa.hibernate.ddl-auto=create-drop
+
+#SQL
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
