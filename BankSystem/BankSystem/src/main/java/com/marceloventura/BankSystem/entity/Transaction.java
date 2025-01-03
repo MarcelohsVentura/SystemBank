@@ -20,9 +20,6 @@ public class Transaction {
     @Setter (AccessLevel.NONE)
     private Long id;
 
-    @Column (name = "transactionValue", nullable = false)
-    private double transactionValue;
-
     @Column (name = "date", nullable = false)
     private Date date;
 
@@ -48,12 +45,11 @@ public class Transaction {
     @Column (nullable = false)
     private AccountType accountType;
 
-    @Column (nullable = false)
+    @Column (name = "transactionValue", nullable = false)
     private double amount;
 
     @Builder
-    public Transaction(double transactionValue, Date date, Account sourceAccount, Account destinationAccount, double previousBalance, double laterBalance, double amount, TransactionType transactionType, AccountType accountType) {
-        this.transactionValue = transactionValue;
+    public Transaction(Date date, Account sourceAccount, Account destinationAccount, double previousBalance, double laterBalance, double amount, TransactionType transactionType, AccountType accountType) {
         this.date = date;
         this.sourceAccount = sourceAccount;
         this.destinationAccount = destinationAccount;

@@ -11,8 +11,6 @@ public class TransactionResponseDTO {
 
     private Long id;
 
-    private double transactionValue;
-
     private Date date;
 
     private Account sourceAccount;
@@ -31,7 +29,6 @@ public class TransactionResponseDTO {
 
     public TransactionResponseDTO (Transaction transaction) {
         this.id = transaction.getId();
-        this.transactionValue = transaction.getTransactionValue();
         this.date = transaction.getDate();
         this.sourceAccount = transaction.getSourceAccount();
         this.destinationAccount = transaction.getDestinationAccount();

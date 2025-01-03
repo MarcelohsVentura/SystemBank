@@ -1,16 +1,29 @@
-Colocar os métodos de autenticação e verificação que foram colocados em outras classes,
-nas classes Mapper e Authentication
+Usar os métodos de autenticação da classe Authentication
 
 Na classe Authentication, ver se preciso usar o request no lugar da entity
 
-Criar classe transaction no service, reposository (a ver) e mapper
+Ver em quais pacotes terei classes da bankstatement (extrato) e como ela vai funcionar
 
-Após criar a classe transaction, criar a classe extrato (a ver em quais pacotes)
+A classe system (interativo) vai ter um switch para o usuário transitar entre as opções.
 
-O sistema vai chamar método de autenticação de idNumber e password (singleton), e vai ter
-a lista de contas do cliente, e ele escolherá qual quer acessar. Acessando, escolhe as operações.
+A classe system terá opção de login (método para autenticar o idnumber e password), após esta autenticação,
+vai exibir a lista de contas do cliente, e ele escolherá qual quer acessar. Acessando, escolhe as operações.
 
-Após tudo, criar a classe sistema e depois as controllers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,20 +50,3 @@ Promover o Princípio Aberto-Fechado (OCP)
 
 Permite adicionar novos comportamentos sem alterar o código que usa essas estratégias.
 Exemplo: Algoritmos de ordenação diferentes para cenários específicos.
-
-
-
-spring.application.name=bankSystem
-#datasource
-spring.datasource.url=jdbc:postgresql://localhost:5432/bankSystemAPI
-spring.datasource.username=postgres
-spring.datasource.password=marc
-
-
-#JPA
-spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
-spring.jpa.hibernate.ddl-auto=create-drop
-
-#SQL
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true

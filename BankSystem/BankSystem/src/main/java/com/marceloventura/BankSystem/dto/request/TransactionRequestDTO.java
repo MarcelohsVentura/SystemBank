@@ -13,8 +13,6 @@ public class TransactionRequestDTO {
 
     private Long destinationAccountId;
 
-    private double previousBalance;
-
     private double amount;
 
     private TransactionType transactionType;
