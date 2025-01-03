@@ -20,15 +20,16 @@ public class DepositProcessor implements TransactionProcessor {
     private AccountRepository accountRepository;
 
     @Override
-    public void process(Account account, TransactionRequestDTO transactionRequestDTO) {
+    public void process(Account sourceAccount, Account destinationAccount, TransactionRequestDTO transactionRequestDTO) {
         double amount = transactionRequestDTO.getAmount();
+
         validator.validateDeposit(amount);
 
-        if (account instanceof CheckingAccount) {
+        if (sourceAccount instanceof CheckingAccount) {
             checkingAccountService.checkingAccountTransactionFee(transactionRequestDTO, amount);
-        } else if (account instanceof  SavingsAccount) {
+        } else if (sourceAccount instanceof  SavingsAccount) {
             savingsAccountService.savingsAccountMonthlyIncome(transactionRequestDTO, amount);
         }
-        accountRepository.save(account);
+        accountRepository.save(sourceAccount);
     }
 }

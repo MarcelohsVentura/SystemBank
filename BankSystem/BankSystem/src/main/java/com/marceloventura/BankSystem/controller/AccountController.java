@@ -17,8 +17,6 @@ public class AccountController {
 
     private final AccountService accountService;
 
-    private final AccountMapper accountMapper;
-
     @GetMapping("/{id}")
     public ResponseEntity<AccountResponseDTO> findById(@PathVariable Long id) {
         try {
@@ -27,7 +25,6 @@ public class AccountController {
         } catch (ResponseStatusException e) {
             return ResponseEntity.status(e.getStatusCode()).body(null);
         }
-
     }
 
     @PostMapping

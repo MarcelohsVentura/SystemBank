@@ -22,16 +22,14 @@ public class AccountServiceImplements implements AccountService {
 
     private final AccountMapper accountMapper;
     private final AccountRepository accountRepository;
-    private final ClientRepository clientRepository;
     private final Validator validator;
     private final ClientService clientService;
     private final BankService bankService;
 
     @Autowired
-    public AccountServiceImplements(AccountMapper accountMapper, AccountRepository accountRepository, ClientRepository clientRepository, Validator validator, ClientService clientService, BankService bankService) {
+    public AccountServiceImplements(AccountMapper accountMapper, AccountRepository accountRepository, Validator validator, ClientService clientService, BankService bankService) {
         this.accountMapper = accountMapper;
         this.accountRepository = accountRepository;
-        this.clientRepository = clientRepository;
         this.validator = validator;
         this.clientService = clientService;
         this.bankService = bankService;

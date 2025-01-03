@@ -21,29 +21,33 @@ public class TransferProcessor implements TransactionProcessor {
     }
 
     @Override
-    public void process(Account account, TransactionRequestDTO transactionRequestDTO) {
+    public void process(Account sourceAccount, Account destinationAccount, TransactionRequestDTO transactionRequestDTO) {
 
         double amount = transactionRequestDTO.getAmount();
 
-        Long destinationAccountId = transactionRequestDTO.getDestinationAccount().getId();
+        Long destinationAccountId = transactionRequestDTO.getDestinationAccountId();
+        Long sourceAccountId = transactionRequestDTO.getSourceAccountId();
 
-        Account destinationAccount = accountRepository.findById(destinationAccountId)
+        destinationAccount = accountRepository.findById(destinationAccountId)
                 .orElseThrow(() -> new EntityNotFoundException("Destination account not found with ID: " + destinationAccountId));
+
+        sourceAccount = accountRepository.findById(sourceAccountId)
+                .orElseThrow(() -> new EntityNotFoundException("Source account not found with ID: " + sourceAccountId));
 
         validator.validateDeposit(amount);
 
-        validator.validateAccountForTransactions(account);
+        validator.validateAccountForTransactions(sourceAccount);
 
-        if (account instanceof CheckingAccount) {
+        if (sourceAccount instanceof CheckingAccount) {
             double fee = amount * checkingAccount.getTransactionFee();
-            account.setBalance(account.getBalance() - amount - fee);
-        } else if (account instanceof SavingsAccount) {
-            account.setBalance(account.getBalance() - amount);
+            sourceAccount.setBalance(sourceAccount.getBalance() - amount - fee);
+        } else if (sourceAccount instanceof SavingsAccount) {
+            sourceAccount.setBalance(sourceAccount.getBalance() - amount);
         }
 
         destinationAccount.setBalance(destinationAccount.getBalance() + amount);
 
-        accountRepository.save(account);
+        accountRepository.save(sourceAccount);
         accountRepository.save(destinationAccount);
     }
 }

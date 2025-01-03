@@ -4,5 +4,5 @@ import com.marceloventura.BankSystem.dto.request.TransactionRequestDTO;
 import com.marceloventura.BankSystem.entity.Account;
 
 public interface TransactionProcessor {
-    void process (Account account, TransactionRequestDTO transactionRequestDTO);
+    void process (Account sourceAccount, Account destinationAccount, TransactionRequestDTO transactionRequestDTO);
 }
