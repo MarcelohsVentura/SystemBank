@@ -34,28 +34,39 @@ public class TransactionServiceImplements implements TransactionService {
 
     @Override
     public void processTransaction (TransactionRequestDTO transactionRequestDTO) {
-        TransactionProcessorFactory transactionProcessorFactory = new TransactionProcessorFactory(accountRepository);
-        Transaction transaction = transactionRepository.findById(transactionRequestDTO.getId())
-                .orElseThrow(() -> new EntityNotFoundException("Account not found "));
 
-        Account account = transaction.getDestinationAccount();
+        Account sourceAccount = accountRepository.findById(transactionRequestDTO.getSourceAccountId())
+                .orElseThrow(() -> new RuntimeException("Source account not found"));
+
+        Account destinationAccount = null;
+        if (transactionRequestDTO.getTransactionType() == TransactionType.TRANSFER) {
+            destinationAccount = accountRepository.findById(transactionRequestDTO.getDestinationAccountId())
+                    .orElseThrow(() -> new RuntimeException("Destination account not found"));
+        }
+
+        TransactionProcessorFactory transactionProcessorFactory = new TransactionProcessorFactory(accountRepository);
+
 
         TransactionProcessor processor = transactionProcessorFactory.getProcessor(transactionRequestDTO.getTransactionType());
 
-        processor.process(account, transactionRequestDTO);
+        processor.process(sourceAccount, destinationAccount, transactionRequestDTO);
 
-        accountRepository.save(account);
+        accountRepository.save(sourceAccount);
+        if (destinationAccount != null) {
+            accountRepository.save(destinationAccount);
+        }
 
-        registerTransaction(account, transactionRequestDTO.getAmount(), transactionRequestDTO.getTransactionType());
+        registerTransaction(sourceAccount, destinationAccount, transactionRequestDTO.getAmount(), transactionRequestDTO.getTransactionType());
 
     }
 
-    private void registerTransaction (Account account, double amount, TransactionType transactionType) {
+    private void registerTransaction (Account sourceAccount, Account destinationAccount, double amount, TransactionType transactionType) {
         Transaction transaction = Transaction.builder()
                 .transactionType(transactionType)
                 .amount(amount)
                 .date(new Date())
-                .destinationAccount(account)
+                .sourceAccount(sourceAccount)
+                .destinationAccount(destinationAccount)
                 .build();
 
         transactionRepository.save(transaction);

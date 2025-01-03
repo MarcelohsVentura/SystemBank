@@ -1,0 +1,138 @@
+Extrato da Transação: 
+Banco: Banco Exemplo
+Agência: 1234
+Conta: 0002 (Conta Poupança)
+Tipo de Transação: Transferência
+Cliente: Maria Souza
+Cliente Beneficiário: João Silva
+Saldo Anterior: R$ 1000,00
+Saldo Posterior: R$ 980,00
+Data: Thu Nov 28 19:22:53 BRT 2024
+Data da Transação: Thu Nov 28 19:30:28 BRT 2024
+Tipo de Transação: SAQUE
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 980.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:30:40 BRT 2024
+Tipo de Transação: TRANSFERENCIA
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 980.0
+Saldo Posterior: R$ 960.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:33:52 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 1020.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:34:11 BRT 2024
+Tipo de Transação: SAQUE
+Valor da Transação: R$ 100.0
+Saldo Anterior: R$ 1020.0
+Saldo Posterior: R$ 920.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:34:16 BRT 2024
+Tipo de Transação: TRANSFERENCIA
+Valor da Transação: R$ 100.0
+Saldo Anterior: R$ 920.0
+Saldo Posterior: R$ 820.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:36:51 BRT 2024
+Tipo de Transação: TRANSFERENCIA
+Valor da Transação: R$ 100.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 900.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:38:10 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 100.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 1100.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:41:14 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 100.0
+Saldo Anterior: R$ 2000.0
+Saldo Posterior: R$ 2100.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:47:23 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 12.0
+Saldo Anterior: R$ 2000.0
+Saldo Posterior: R$ 2012.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:49:36 BRT 2024
+Tipo de Transação: SAQUE
+Valor da Transação: R$ 2.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 998.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:49:53 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 2000.0
+Saldo Posterior: R$ 2020.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Thu Nov 28 19:50:01 BRT 2024
+Tipo de Transação: TRANSFERENCIA
+Valor da Transação: R$ 200.0
+Saldo Anterior: R$ 998.0
+Saldo Posterior: R$ 798.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Fri Nov 29 07:38:53 BRT 2024
+Tipo de Transação: SAQUE
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 980.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Fri Nov 29 10:22:45 BRT 2024
+Tipo de Transação: DEPOSITO
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 2000.0
+Saldo Posterior: R$ 2020.0
+Conta Destino: 0002
+Conta Origem: 0001
+
+Data da Transação: Fri Nov 29 10:22:47 BRT 2024
+Tipo de Transação: SAQUE
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 1000.0
+Saldo Posterior: R$ 980.0
+Conta Destino: Não se aplica para este tipo de transação (Saque)
+Conta Origem: 0001
+
+Data da Transação: Fri Nov 29 10:22:51 BRT 2024
+Tipo de Transação: TRANSFERENCIA
+Valor da Transação: R$ 20.0
+Saldo Anterior: R$ 980.0
+Saldo Posterior: R$ 960.0
+Conta Destino: 0002
+Conta Origem: 0001
+

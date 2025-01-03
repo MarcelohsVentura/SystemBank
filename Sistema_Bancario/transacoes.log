@@ -1,0 +1,56 @@
+Transação Depósito: R$ 250.0 realizada em Wed Nov 27 13:07:01 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 1250.0
+Banco: null
+Agência: null
+Transação null: R$ 0.0 realizada em Wed Nov 27 13:07:11 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 0.0
+Saldo Depois: R$ 0.0
+Banco: Banco Teste
+Agência: 001
+Transação Depósito: R$ 250.0 realizada em Wed Nov 27 13:13:05 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 1250.0
+Banco: null
+Agência: null
+Transação null: R$ 0.0 realizada em Wed Nov 27 13:13:07 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 0.0
+Saldo Depois: R$ 0.0
+Banco: Banco Teste
+Agência: 001
+Transação Depósito: R$ 250.0 realizada em Wed Nov 27 13:26:26 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 1250.0
+Banco: null
+Agência: null
+Transação Depósito: R$ 300.0 realizada em Wed Nov 27 13:28:53 BRT 2024
+Conta Origem: 0001
+Conta Destino: 0001
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 1300.0
+Banco: null
+Agência: null
+Transação Depósito: R$ 122.0 realizada em Wed Nov 27 13:30:21 BRT 2024
+Conta Origem: 123
+Conta Destino: 123
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 1122.0
+Banco: null
+Agência: null
+Transação Transferência: R$ 100.0 realizada em Wed Nov 27 13:39:39 BRT 2024
+Conta Origem: 123
+Conta Destino: 456
+Saldo Antes: R$ 1000.0
+Saldo Depois: R$ 900.0
+Banco: Banco Teste
+Agência: 001
